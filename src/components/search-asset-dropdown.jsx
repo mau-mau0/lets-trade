@@ -1,16 +1,28 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
+import { Box, useTheme } from "@mui/material";
+import { tokens } from "../theme";
 
 export default function SearchAssets() {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
   return (
-    <Autocomplete
-      disablePortal
-      id="combo-box-demo"
-      options={top100Films}
+    <Box
+      display="flex"
+      backgroundColor={colors.primary[400]}
+      borderRadius="3px"
       sx={{ width: 300 }}
-      renderInput={(params) => <TextField {...params} label="Search for item name" />}
-    />
+    >
+      <Autocomplete
+        disablePortal
+        id="combo-box-demo"
+        options={top100Films}
+        sx={{ width: "inherit" }}
+        renderInput={(params) => <TextField {...params} label="Search for item name" />}
+      />
+    </Box>
   );
 }
 

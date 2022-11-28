@@ -3,17 +3,25 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { Box, useTheme } from "@mui/material";
+import { tokens } from "../theme";
 
 export default function SelectNetwork() {
   const [network, setNetwork] = React.useState('');
-
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   const handleChange = (event) => {
     setNetwork(event.target.value);
   };
 
   return (
-    <div>
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
+    <Box
+      display="flex"
+      backgroundColor={colors.primary[400]}
+      borderRadius="3px"
+      sx={{ m: 1, minWidth: 120 }}
+    >
+      <FormControl sx={{ minWidth: "inherit" }}>
         <InputLabel id="demo-simple-select-helper-label">Network</InputLabel>
         <Select
           labelId="demo-simple-select-helper-label"
@@ -27,6 +35,6 @@ export default function SelectNetwork() {
           <MenuItem value={30}>Binance</MenuItem>
         </Select>
       </FormControl>
-    </div>
+    </Box>
   );
 }
