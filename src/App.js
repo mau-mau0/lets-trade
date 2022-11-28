@@ -4,7 +4,8 @@ import Topbar from "./pages/global/topbar";
 import Sidebar from "./pages/global/sidebar";
 import Landing from "./pages/landing-page/landing";
 import Inventory from "./pages/user-inventory/inventory";
-// import Invoices from "./scenes/invoices";
+import IncomingOffers from "./pages/incoming-trades/incoming";
+import OutgoingOffers from "./pages/outgoing-trades/outgoing";
 // import Contacts from "./scenes/contacts";
 // import Bar from "./scenes/bar";
 // import Form from "./scenes/form";
@@ -31,6 +32,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Landing />} />
               <Route path="/inventory" element={<Inventory />} />
+              <Route path="/incomingOffers" element={<IncomingOffers />} />
+              <Route path="/outgoingOffers" element={<OutgoingOffers />} />
               {/* <Route path="/contacts" element={<Contacts />} />
               <Route path="/invoices" element={<Invoices />} />
               <Route path="/form" element={<Form />} />

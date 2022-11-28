@@ -162,15 +162,15 @@ const Sidebar = () => {
               Trading
             </Typography>
             <Item
-              title="Offer a Trade"
-              to="/makeatrade"
+              title="Incoming Offers"
+              to="/incomingOffers"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="My Offers"
-              to="/viewmytrades"
+              title="Sent Offers"
+              to="/outgoingOffers"
               icon={<CalendarTodayOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
