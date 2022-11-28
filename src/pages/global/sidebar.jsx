@@ -159,18 +159,18 @@ const Sidebar = () => {
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
-              Pages
+              Trading
             </Typography>
             <Item
-              title="Profile Form"
-              to="/form"
+              title="Offer a Trade"
+              to="/makeatrade"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Calendar"
-              to="/calendar"
+              title="My Offers"
+              to="/viewmytrades"
               icon={<CalendarTodayOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

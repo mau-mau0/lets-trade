@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Topbar from "./pages/global/topbar";
 import Sidebar from "./pages/global/sidebar";
 import Landing from "./pages/landing-page/landing";
-// import Inventory from "./pages/inventory";
+import Inventory from "./pages/user-inventory/inventory";
 // import Invoices from "./scenes/invoices";
 // import Contacts from "./scenes/contacts";
 // import Bar from "./scenes/bar";
@@ -30,8 +30,8 @@ function App() {
             <Topbar setIsSidebar={setIsSidebar} />
             <Routes>
               <Route path="/" element={<Landing />} />
-              {/* <Route path="/inventory" element={<Inventory />} />
-              <Route path="/contacts" element={<Contacts />} />
+              <Route path="/inventory" element={<Inventory />} />
+              {/* <Route path="/contacts" element={<Contacts />} />
               <Route path="/invoices" element={<Invoices />} />
               <Route path="/form" element={<Form />} />
               <Route path="/bar" element={<Bar />} />
